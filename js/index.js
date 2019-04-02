@@ -19,12 +19,10 @@ function displayRepositories() {
     .join('')}</ul>`;
     document.getElementById('repositories').innerHTML = repoList;
 }
-function displayCommits(){
-  const commits = JSON.parse(this.responseText)
-  const commitsList = `<ul>${commits.map(c => `<li>${c.author.login} ${c.commit.author.name} ${c.commit.message}</li>`).join('')}</ul>`
 
-  document.getElementById('details').innerHTML = commitsList
-}
+
+
+
 
 function getCommits(el){
   const username = el.dataset.username
@@ -34,6 +32,16 @@ function getCommits(el){
   req.open('GET', `https://api.github.com/repos/${username}/${repo}/commits`)
   req.send()
 }
+
+function displayCommits(){
+  const commits = JSON.parse(this.responseText)
+  const commitsList = `<ul>${commits.map(c => `<li>${c.author.login} ${c.commit.author.name} ${c.commit.message}</li>`).join('')}</ul>`
+
+  document.getElementById('details').innerHTML = commitsList
+}
+
+
+
 
 
 function getBranches(){
@@ -46,9 +54,5 @@ function getBranches(){
 }
 
 function displayBranches(el) {
-  const name = el.dataset.repo;
-  const req = new XMLHttpRequest();
-  req.addEventListener('load', showCommits);
-  req.open('GET', 'https://api.github.com/repos/' + name + '/:repo/branches');
-  req.send();
+
 }
