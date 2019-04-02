@@ -6,7 +6,7 @@ function getRepositories() {
 }
 
 
-function showRepositories() {
+function showRepositleaories() {
   console.log(this.responseText);
   let repoList = '<ul>';
   for (var i = 0; i < this.responseText.length; i++) {
@@ -28,6 +28,6 @@ function displayBranches(el) {
 
 function displayCommits() {}
 function displayRepositories() {}
-function showRepositleaories() {}
+
 function getCommits(){}
 function getBranches(){}
