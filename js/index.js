@@ -22,6 +22,7 @@ function displayRepositories() {
 
 function getCommits(){}
 
+
 function displayCommits() {}
 
 function getBranches(){}
