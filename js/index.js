@@ -1,12 +1,16 @@
 function getRepositories() {
-  const req = new XMLHttpRequest();
-  req.addEventListener('load', showRepositleaories);
-  req.open('GET', 'https://api.github.com/users/octocat/repos');
-  req.send();
+  const username = document.getElementById("username").value //input from form 
+  const request = new XMLHttpRequest();
+  request.addEventListener('load', displayRepositories);
+  request.open('GET', 'https://api.github.com/users/' + username + "/repos");
+  request.send();
 }
 
-function displayRepositories() {}
-
+function displayRepositories() {
+  //alert(this.responseText);
+   //const user = document.getElementById("username").value
+   //alert(user);
+}
 
 function getCommits(){}
 function displayCommits() {}
