@@ -37,7 +37,16 @@ function getCommits(el){
 }
 
 
-function getBranches(){}
+function getBranches(){
+    const owner = el.dataset.username
+  const repo = el.dataset.repository
+  const req = new XMLHttpRequest()
+  debugger
+  req.addEventListener('load', displayCommits)
+  req.open('GET', `https://api.github.com/repos/${owner}/${repo}/commits`)
+  req.send()
+}
+
 function displayBranches(el) {
   const name = el.dataset.repo;
   const req = new XMLHttpRequest();
