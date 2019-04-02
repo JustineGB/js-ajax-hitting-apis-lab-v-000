@@ -16,6 +16,8 @@ function showRepositleaories() {
   document.getElementById('repositories').innerHTML = repoList;
 }
 
+
+
 // function displayBranches(el) {
 //   const name = el.dataset.repo;
 //   const req = new XMLHttpRequest();
@@ -24,10 +26,7 @@ function showRepositleaories() {
 //   req.send();
 // }
 
-
-
 function displayCommits() {}
 function displayRepositories() {}
-
 function getCommits(){}
 function getBranches(){}
