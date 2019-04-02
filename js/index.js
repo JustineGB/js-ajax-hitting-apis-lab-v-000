@@ -28,14 +28,11 @@ function getCommits(el){
 
 function displayCommits(){
   const commits = JSON.parse(this.responseText)
-  const commitsList = `<ul>${commits.map(c => `<li>${c.author.login} ${c.commit.author.name} ${c.commit.message}</li>`).join('')}</ul>`
-
+  const commitsList = `<ul>${commits
+  .map(c => `<li>${c.author.login} ${c.commit.author.name} ${c.commit.message}</li>`)
+  .join('')}</ul>`
   document.getElementById('details').innerHTML = commitsList
 }
-
-
-
-
 
 function getBranches(el){
   const username = el.dataset.username
