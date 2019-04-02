@@ -5,6 +5,7 @@ function getRepositories() {
   req.send();
 }
 
+
 function displayBranches(el) {
   const name = el.dataset.repo;
   const req = new XMLHttpRequest();
