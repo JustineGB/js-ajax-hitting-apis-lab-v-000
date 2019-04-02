@@ -27,11 +27,11 @@ function getCommits(el){
 }
 
 function displayCommits(){
-  const commits = JSON.parse(this.responseText)
-  const commitsList = `<ul>${commits
+  const com = JSON.parse(this.responseText)
+  const commits = `<ul>${commits
   .map(c => `<li>${c.author.login} ${c.commit.author.name} ${c.commit.message}</li>`)
   .join('')}</ul>`
-  document.getElementById('details').innerHTML = commitsList
+  document.getElementById('details').innerHTML = commits
 }
 
 function getBranches(el){
