@@ -8,6 +8,9 @@ function getRepositories() {
 function displayRepositories() {}
 
 
+function getCommits(){}
+function displayCommits() {}
+function getBranches(){}
 // function displayBranches(el) {
 //   const name = el.dataset.repo;
 //   const req = new XMLHttpRequest();
@@ -15,7 +18,3 @@ function displayRepositories() {}
 //   req.open('GET', 'https://api.github.com/repos/' + name + '/:repo/branches');
 //   req.send();
 // }
-
-function displayCommits() {}
-function getCommits(){}
-function getBranches(){}
