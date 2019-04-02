@@ -5,6 +5,9 @@ function getRepositories() {
   req.send();
 }
 
+function displayRepositories() {}
+
+
 // function displayBranches(el) {
 //   const name = el.dataset.repo;
 //   const req = new XMLHttpRequest();
@@ -14,6 +17,5 @@ function getRepositories() {
 // }
 
 function displayCommits() {}
-function displayRepositories() {}
 function getCommits(){}
 function getBranches(){}
