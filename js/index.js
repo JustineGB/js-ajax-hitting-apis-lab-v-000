@@ -17,12 +17,6 @@ function displayRepositories() {
     document.getElementById('repositories').innerHTML = repoList;
 }
 
-
-
-
-
-
-
 function getCommits(el){
   const username = el.dataset.username
   const repo = el.dataset.repository
